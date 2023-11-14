@@ -43,7 +43,7 @@ public class Main {
     private static void Randomaccess(List<Integer> list, String listType) {
         long time = System.currentTimeMillis();
         for (int i = 0; i < list.size(); i++) {
-            int value = list.get(i);
+            int get = list.get(i);
         }
         System.out.printf("Random access1 in %s: %d ms%n", listType, System.currentTimeMillis() - time);
     }
@@ -59,7 +59,7 @@ public class Main {
     private static void insertAtthebeginning(List<Integer> list, int insert, String listType) {
         long time = System.currentTimeMillis();
         for (int i = 0; i < insert; i++) {
-            list.add(0, i);
+            list.add(0, (int) (Math.random() * insert));
         }
         System.out.printf("Insert at the beginning of %s: %d ms%n", listType, System.currentTimeMillis() - time);
     }
@@ -67,7 +67,7 @@ public class Main {
     private static void insertAttheend(List<Integer> list, int insert, String listType) {
         long time = System.currentTimeMillis();
         for (int i = 0; i < insert; i++) {
-            list.add(i);
+            list.add((int) (Math.random() * insert));
         }
         System.out.printf("Insert at the end of %s: %d ms%n", listType, System.currentTimeMillis() - time);
     }
@@ -76,7 +76,7 @@ public class Main {
         int mid = list.size() / 2;
         long time = System.currentTimeMillis();
         for (int i = 0; i < insert; i++) {
-            list.add(mid, i);
+            list.add(mid, (int) (Math.random() * insert));
         }
         System.out.printf("Insert1 in the middle of %s: %d ms%n", listType, System.currentTimeMillis() - time);
     }
